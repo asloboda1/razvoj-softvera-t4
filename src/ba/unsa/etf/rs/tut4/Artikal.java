@@ -19,6 +19,11 @@ public class Artikal {
         }
     }
 
+    public Artikal(String abc, String proizvod, int i) {
+        setSifra(abc);
+        setNaziv(proizvod);
+        setCijena(i);
+    }
 
 
     public String getSifra() {
