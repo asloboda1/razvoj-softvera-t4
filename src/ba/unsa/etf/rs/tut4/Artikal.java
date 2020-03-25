@@ -1,4 +1,6 @@
 package ba.unsa.etf.rs.tut4;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Artikal {
     private String sifra;
@@ -19,10 +21,22 @@ public class Artikal {
         }
     }
 
+
+
     public Artikal(String abc, String proizvod, int i) {
         setSifra(abc);
         setNaziv(proizvod);
         setCijena(i);
+    }
+
+    public static void izbaciDuplikate(ArrayList<Artikal> lista) {
+        for(int i=0; i<lista.size()-1; i++)
+        {
+            String x= new String();
+            Array.get(lista,i);
+            for(int j=i+1; j<lista.size();j++)
+
+        }
     }
 
 
