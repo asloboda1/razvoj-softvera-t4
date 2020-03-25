@@ -34,7 +34,7 @@ public class Artikal {
         {
             String x= new String();
             Array.get(lista,i);
-            for(int j=i+1; j<lista.size();j++)
+
 
         }
     }
