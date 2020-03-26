@@ -132,7 +132,7 @@ class ArtikalTest {
         lista.add(new Artikal("DEF", "Usluga", 200));
         lista.add(new Artikal("ABC", "Proizvod", 100));
         lista.add(new Artikal("ABC", "Proizvod", 100));
-        lista.add(new Artikal("DEF", "Usluga", 200.2));
+        //lista.add(new Artikal("DEF", "Usluga", 200.2));
         lista.add(new Artikal("DEF", "Usluga", 200));
         Artikal.izbaciDuplikate(lista);
         assertEquals(3, lista.size());

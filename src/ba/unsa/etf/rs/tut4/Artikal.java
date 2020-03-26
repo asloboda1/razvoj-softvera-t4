@@ -66,4 +66,27 @@ public class Artikal {
         if(cijena<0) throw new IllegalArgumentException("Cijena je negativna");
         this.cijena = cijena;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Artikal artikal = (Artikal) o;
+
+        if (Double.compare(artikal.cijena, cijena) != 0) return false;
+        if (sifra != null ? !sifra.equals(artikal.sifra) : artikal.sifra != null) return false;
+        return naziv != null ? naziv.equals(artikal.naziv) : artikal.naziv == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = sifra != null ? sifra.hashCode() : 0;
+        result = 31 * result + (naziv != null ? naziv.hashCode() : 0);
+        temp = Double.doubleToLongBits(cijena);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
