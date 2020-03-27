@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Artikli">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="1.0" prefHeight="369.0" prefWidth="600.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="33.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="340.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="33.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="316.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextArea fx:id="unos" prefHeight="121.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextArea fx:id="ispis" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#DodajArtikle" prefHeight="25.0" prefWidth="116.0" text="Dodaj Artikle" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Račun">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="372.0" prefWidth="600.0">
+                           <children>
+                              <GridPane layoutY="12.0" prefHeight="361.0" prefWidth="606.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="129.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="206.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="257.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="89.0" minHeight="5.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="245.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="245.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="110.0" text="Artikal:" GridPane.halignment="CENTER" />
+                                    <Label layoutX="27.0" layoutY="25.0" prefHeight="17.0" prefWidth="110.0" text="Količna:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label layoutX="27.0" layoutY="70.0" prefHeight="17.0" prefWidth="110.0" text="Aktuelni račun:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                                    <ChoiceBox fx:id="choice" prefWidth="150.0" GridPane.columnIndex="1" />
+                                    <Spinner GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children></Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

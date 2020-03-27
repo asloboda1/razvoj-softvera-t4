@@ -23,7 +23,7 @@ public class Artikal {
 
 
 
-    public Artikal(String abc, String proizvod, int i) {
+    public Artikal(String abc, String proizvod, double i) {
         setSifra(abc);
         setNaziv(proizvod);
         setCijena(i);
@@ -89,4 +89,5 @@ public class Artikal {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
 }

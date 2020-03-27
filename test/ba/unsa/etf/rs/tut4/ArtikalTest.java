@@ -92,7 +92,7 @@ class ArtikalTest {
             a.setNaziv("");
         }, "Naziv je prazan");
     }
-/*
+
     @Test
     void testEquals() {
         Artikal a1 = new Artikal("ABC", "Proizvod", 100);
@@ -102,8 +102,8 @@ class ArtikalTest {
     }
 
 
- */
- /*   @Test
+
+    @Test
     void testNotEquals() {
         Artikal a1 = new Artikal("ABC", "Proizvod", 100);
         Artikal a2 = new Artikal("ABC", "Proizvod", 100);
@@ -124,7 +124,7 @@ class ArtikalTest {
     }
 
 
-  */
+
     @Test
     void izbaciDuplikate() {
         ArrayList<Artikal> lista = new ArrayList<>();
@@ -132,7 +132,7 @@ class ArtikalTest {
         lista.add(new Artikal("DEF", "Usluga", 200));
         lista.add(new Artikal("ABC", "Proizvod", 100));
         lista.add(new Artikal("ABC", "Proizvod", 100));
-        //lista.add(new Artikal("DEF", "Usluga", 200.2));
+        lista.add(new Artikal("DEF", "Usluga", 200.2));
         lista.add(new Artikal("DEF", "Usluga", 200));
         Artikal.izbaciDuplikate(lista);
         assertEquals(3, lista.size());
