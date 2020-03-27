@@ -63,10 +63,10 @@
                                     <Label prefHeight="17.0" prefWidth="110.0" text="Artikal:" GridPane.halignment="CENTER" />
                                     <Label layoutX="27.0" layoutY="25.0" prefHeight="17.0" prefWidth="110.0" text="Količna:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                     <Label layoutX="27.0" layoutY="70.0" prefHeight="17.0" prefWidth="110.0" text="Aktuelni račun:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                                    <Button id="dodajracun" mnemonicParsing="false" onAction="#dodajracun" prefHeight="25.0" prefWidth="102.0" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                                     <ChoiceBox fx:id="choice" prefWidth="150.0" GridPane.columnIndex="1" />
-                                    <Spinner GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Spinner id="spiner" max="20" min="1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextArea fx:id="racunarea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                  </children>
                               </GridPane>
                            </children></Pane>

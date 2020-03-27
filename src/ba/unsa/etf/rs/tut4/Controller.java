@@ -7,6 +7,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 
 import javax.swing.*;
+import java.beans.PropertyEditor;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +18,7 @@ public class Controller {
     public TextArea unos;
     public TextArea ispis;
     public ChoiceBox<String> choice;
+    public SpinnerNumberModel spiner;
 
     public void DodajArtikle(ActionEvent actionEvent) {
         ispis.setEditable(false);
@@ -56,8 +59,28 @@ public class Controller {
         }
         ObservableList<String> observableList = FXCollections.observableList(sifreartikala);
         choice.setItems(observableList);
+        choice.getSelectionModel().selectFirst();
+
 
     }
+    public TextArea dodajracun;
+    public void dodajracun(ActionEvent actionEvent)
+    {
+
+        String sifra= new String();
+
+        int cijena=0;
+
+        sifra=choice.getValue();
+
+        System.out.println("Radi");
+        String upisinistring= new String();
+        upisinistring+=sifra+"   ";
+        dodajracun.setText(upisinistring);
+    }
+
+
+
 }
 
 
