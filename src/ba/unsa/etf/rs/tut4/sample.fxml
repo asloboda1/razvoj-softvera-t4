@@ -13,7 +13,7 @@
    <children>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Artikli">
+          <Tab text="Artikli" fx:id="artikli">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -34,13 +34,13 @@
                            <children>
                               <TextArea fx:id="unos" prefHeight="121.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextArea fx:id="ispis" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Button mnemonicParsing="false" onAction="#DodajArtikle" prefHeight="25.0" prefWidth="116.0" text="Dodaj Artikle" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button  fx:id="formaartikla" mnemonicParsing="false" onAction="#DodajArtikle" prefHeight="25.0" prefWidth="116.0" text="Dodaj Artikle" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab text="Račun">
+          <Tab text="Račun" fx:id="racun">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -65,7 +65,7 @@
                                     <Label layoutX="27.0" layoutY="70.0" prefHeight="17.0" prefWidth="110.0" text="Aktuelni račun:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
                                     <Button id="dodajracun" mnemonicParsing="false" onAction="#dodajracun" prefHeight="25.0" prefWidth="102.0" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                                     <ChoiceBox fx:id="choice" prefWidth="150.0" GridPane.columnIndex="1" />
-                                    <Spinner id="spiner" max="20" min="1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Spinner fx:id="spiner" max="20" min="1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     <TextArea fx:id="racunarea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                  </children>
                               </GridPane>

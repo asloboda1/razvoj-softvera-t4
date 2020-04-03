@@ -8,7 +8,7 @@ public class Artikal {
     private double cijena;
 
 
-    public Artikal(String unos) {
+  /*  public Artikal(String unos) {
 
         String[] atributi;
         String[]  red=unos.split("\n");
@@ -20,7 +20,7 @@ public class Artikal {
             setCijena(Double.parseDouble(atributi[2]));
         }
     }
-
+*/
 
 
     public Artikal(String abc, String proizvod, double i) {
@@ -29,16 +29,25 @@ public class Artikal {
         setCijena(i);
     }
 
-    public static void izbaciDuplikate(ArrayList<Artikal> lista) {
-        for(int i=0; i<lista.size()-1; i++)
-        {
-            String x= new String();
-            Array.get(lista,i);
-
-
-        }
+    @Override
+    public String toString() {
+        return
+                  sifra  +","
+        +naziv  +","
+             +    cijena
+                ;
     }
 
+    public static void izbaciDuplikate(ArrayList<Artikal> lista) {
+        for (int i = 0; i < lista.size(); i++) {
+            for (int j = i+1; j < lista.size(); j++) {
+                if (lista.get(i).equals(lista.get(j))) {
+                    lista.remove(j);
+                    j--;
+                }
+            }
+        }
+    }
 
     public String getSifra() {
         return sifra;
@@ -78,16 +87,4 @@ public class Artikal {
         if (sifra != null ? !sifra.equals(artikal.sifra) : artikal.sifra != null) return false;
         return naziv != null ? naziv.equals(artikal.naziv) : artikal.naziv == null;
     }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = sifra != null ? sifra.hashCode() : 0;
-        result = 31 * result + (naziv != null ? naziv.hashCode() : 0);
-        temp = Double.doubleToLongBits(cijena);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
-
 }

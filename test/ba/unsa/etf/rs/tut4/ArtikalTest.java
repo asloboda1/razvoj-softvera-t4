@@ -144,5 +144,10 @@ class ArtikalTest {
         assertFalse(lista.contains(new Artikal("ABC", "Usluga", 100)));
         assertFalse(lista.contains(new Artikal("DEF", "Usluga", 100)));
     }
+  /*  void Artikal() {
+        ArrayList<Artikal> lista = new ArrayList<>();
+        String recenica="Kraš001,Hljeb,1\nKinder,Bueno,1.4";
+*/
 
-}
+    }
+

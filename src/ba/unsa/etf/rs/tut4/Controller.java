@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 
 import javax.swing.*;
@@ -17,22 +18,33 @@ public class Controller {
 
     public TextArea unos;
     public TextArea ispis;
-    public ChoiceBox<String> choice;
-    public SpinnerNumberModel spiner;
+
 
     public void DodajArtikle(ActionEvent actionEvent) {
-        ispis.setEditable(false);
-        String upis = new String();
-        String tekstarea = new String();
-        tekstarea = unos.getText();
-        String[] spisak = tekstarea.split("\n");
-        List<String> SpisakArray = new ArrayList<String>();
-        SpisakArray = Arrays.asList(spisak);
-        for (String red : SpisakArray) {
-            upis = upis + red + "\n";
+        String ulazni = unos.getText();
+        String[] red = ulazni.split("\n");
+        ArrayList<Artikal> artikli = new ArrayList<>();
+        for (int i=0; i<red.length; i++){
+            String[] razvojeno = red[i].split (",");
 
-            ispis.setText(upis);
+            if (razvojeno.length == 3) {
+                Artikal artikal = new Artikal(razvojeno[0],razvojeno[1],Double.parseDouble(razvojeno[2]));
+                artikli.add(artikal);
+
+
+            }
+            else {
+                throw new IllegalArgumentException("Niste unijeli 3 elementa");
+            }
         }
+        Artikal.izbaciDuplikate(artikli);
+        String red3= new String();
+        red3="";
+        for (Artikal artikal: artikli){
+
+             red3 = red3 + artikal.toString() + "\n";
+        }
+        ispis.setText(red3);
 
         ArrayList<String> sifreartikala = new ArrayList<>();
 
@@ -63,21 +75,28 @@ public class Controller {
 
 
     }
-    public TextArea dodajracun;
-    public void dodajracun(ActionEvent actionEvent)
+
+    public ChoiceBox<String> choice;
+    public Spinner spiner;
+    public TextArea racunarea;
+    public void dodajracun(ActionEvent actionEvent )
     {
-
-        String sifra= new String();
-
-        int cijena=0;
-
-        sifra=choice.getValue();
-
-        System.out.println("Radi");
-        String upisinistring= new String();
-        upisinistring+=sifra+"   ";
+       // int cijena=0;
+         String sifra = choice.getValue();
+         racunarea.setText(sifra);
+         //RADI
+        //System.out.println("Šifra: "+ sifra+"!");
+       // int kolicina33=(int) spiner.getValue();
+        //System.out.println("Radi"+ kolicina33 +"!");
+        //String upisnistring= new String();
+       /* int iznos=ukupanIznos()
+        upisnistring+=sifra+"   "+kolicina33+;
         dodajracun.setText(upisinistring);
+        */
     }
+
+
+
 
 
 
